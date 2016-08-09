@@ -1,0 +1,282 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+@media only screen
+   and (min-device-width: 320px)
+   and (max-width: 568px)
+   and (orientation: portrait) {
+
+
+/*section-1*/
+
+  .section-1 {
+    height: 39em;
+  }
+
+  .jumbotron h1 {
+    font-size: 2em;
+  }
+
+/*section-2*/
+
+}
+
+
+/*---------->>>>section-1<<<<<--------*/
+
+.section-1 {
+  background: url(../images/building.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 53.55em;
+  border-bottom: 2.75px solid rgba(207, 81, 26, 0.9);
+}
+
+.header {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.menu-bar {
+  padding: 0;
+  margin: 0;
+}
+
+.projects, .experience, .contact {
+  padding: .5em 1em;
+  margin-right: 3em;
+}
+
+.projects:hover, .experience:hover, .contact:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.dropdown-menu li:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.dropdown-menu li {
+  padding: .4em 0;
+}
+
+.menu-bar li {
+  display: inline-block;
+  font-size: 2em;
+  color: #fff;
+  font-family: 'Gloria+Hallelujah', cursive;
+}
+
+
+.dropdown-menu {
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: .4em;
+  margin-top: 0;
+  min-width: 200px;
+  border: none;
+}
+
+.dropdown-menu li {
+  display: block;
+}
+
+#dialog {
+  display: none;
+}
+
+#dialog h3 {
+  margin: 0;
+  padding-top: .5em;
+  text-decoration: underline;
+}
+
+#dialog ul {
+  list-style: none;
+}
+
+#dialog ul li {
+  margin: 2em 0;
+  font-size: 1.2em;
+}
+
+#dialog .row img {
+  margin: 0 3em;
+}
+
+#dialog .row img:hover {
+  border: 1.5px solid transparent;
+}
+
+#dialog .row img:last-child {
+  border-radius: 10px;
+}
+
+#dialog .remove-outline, .ui-dialog {
+  outline: none !important;
+}
+
+.ui-dialog { /*The outer container of the dialog.*/
+  border: 2px solid rgba(166, 3, 3, 0.7);
+  height: 100px;
+  width: 100px;
+}
+
+.ui-dialog.ui-corner-all.ui-widget.ui-widget-content.ui-front.ui-dialog-buttons.ui-draggable.ui-resizable {
+  position: absolute !important;
+}
+
+.no-close, .ui-dialog-titlebar-close {
+  display: none;
+}
+
+.ui-dialog-titlebar { /*The title bar containing the dialog's title and close button.*/
+  background-color: rgba(0, 0, 0, .8);
+}
+
+.ui-dialog-title { /*The container around the textual title of the dialog.*/
+}
+
+.ui-dialog-titlebar-close { /*The dialog's close button.*/
+
+}
+
+.ui-widget-header {
+}
+
+.ui-widget-content {
+}
+
+.ui-dialog-content { /*The container around the dialog's content. This is also the element the widget was instantiated with.*/
+  color: #fff;
+  background-color: rgba(0, 0, 0, .8);
+  text-align: center;
+}
+
+.ui-dialog-buttonpane { /*The pane that contains the dialog's buttons. This will only be present if the buttons option is set.*/
+
+}
+
+.ui-dialog-buttonset {
+    background-color: rgba(0,0,0,.8);
+    padding: 3em 0 1em 0;
+}
+
+button.ui-button.ui-corner-all.ui-widget {
+    border-radius: 6px;
+    padding: .5em 3.5em;
+    background-color: rgba(255,255,255,.6);
+    margin-left: 16.6em;
+    border-color: rgba(166, 3, 3, 0.7);
+}
+
+
+
+.jumbotron .container {
+  margin-top: 10em;
+}
+
+.jumbotron {
+  color: #fff;
+  background-color: transparent;
+  text-align: center;
+}
+
+.jumbotron h1 {
+  font-size: 8em;
+  font-family: 'Aldrich', cursive;
+  letter-spacing: .25em;
+}
+
+.jumbotron ul{
+  list-style: none;
+}
+
+.jumbotron ul li {
+  display: inline-block;
+  padding: 0 1em 0 0;
+}
+
+.footer {
+  padding: 6em 0 0 0;
+}
+
+.footer .row {
+  padding-left: 2em;
+}
+
+span.glyphicon.glyphicon-chevron-down {
+    font-size: 5em;
+    color: rgba(255,255,255,0.6);
+    margin-right: 1em;
+    padding-top: .2em;
+}
+
+span.glyphicon.glyphicon-chevron-down:hover  {
+  color: rgba(255,255,255,0.9);
+}
+
+
+/*----------->>>>>section-2<<<<<-----------*/
+
+.section-2 {
+  height: 53.55em;
+  background-color: rgba(0, 0, 0, 1);
+  border-top: 2.75px solid rgba(207, 81, 26, 0.9);
+}
+
+.section-2 .header {
+  max-height: 10em;
+  height: 100%;
+}
+
+.section-2 .header h1 {
+  font-size: 6.5em;
+  text-align: center;
+  padding: .1em 0;
+  color: rgba(207, 81, 26,.6);
+}
+
+#accordion {
+  margin-top: 6em;
+  background-color: transparent;;
+  outline: none !important;
+}
+
+#accordion .row {
+  padding-bottom: 2em;
+}
+
+#accordion .footer {
+  padding: 0;
+}
+
+#accordion .footer .glyphicon-chevron-up {
+  font-size: 3.8em;
+  color: #000;
+  cursor: pointer;
+}
+
+.images {
+  text-align: center;
+}
+
+.images .btn {
+  padding: .5em 2em;
+  display: inline-block;
+  margin: 0 1em;
+}
+
+img.cboxPhoto { /* this is the slideshow photo */
+    margin: 0;
+}
+
+#accordion .footer .glyphicon-chevron-up:hover {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+
+@media only screen  and (min-width : 1224px) {
+  .text {
+    padding: 5em 2em 0 5em
+  }
+}
