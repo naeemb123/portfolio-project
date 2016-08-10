@@ -266,6 +266,10 @@ span.glyphicon.glyphicon-chevron-down:hover  {
   margin: 0 1em;
 }
 
+button {
+  outline: none !important;
+}
+
 img.cboxPhoto { /* this is the slideshow photo */
     margin: 0;
 }
@@ -279,4 +283,8 @@ img.cboxPhoto { /* this is the slideshow photo */
   .text {
     padding: 5em 2em 0 5em
   }
+}
+
+iframe {
+  overflow: hidden;
 }

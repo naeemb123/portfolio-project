@@ -128,11 +128,16 @@ var main = function(){
   //colorbox API: When the image or slideshow button is clicked, then use colorbox API to display the slideshow of the images
 
   $('#second .thumbnail').click(function(){
-    console.log("NFSGSDSBDGDV");
-    $('.group1').colorbox({rel:'group1', transition: "fade", height: "500px", width: "1000px", innerWidth: "1000px" });
+    $('.group1').colorbox({rel:'group1', transition: "fade", height: "490px", width: "700px"});
   });
 
+  $('#second .images .btn').click(function(){
+    $('.group1').colorbox({rel:'group1', transition: "fade", height: "490px", width: "700px"});
+  });
 
+  $('.iframe').click(function(){
+    $(this).colorbox({iframe:true, width:"80%", height:"80%"});
+  });
 
 
 }
