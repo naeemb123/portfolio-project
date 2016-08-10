@@ -222,6 +222,7 @@ span.glyphicon.glyphicon-chevron-down:hover  {
   height: 53.55em;
   background-color: rgba(0, 0, 0, 1);
   border-top: 2.75px solid rgba(207, 81, 26, 0.9);
+  border-bottom: 2.75px solid rgba(207, 81, 26, 0.9);
 }
 
 .section-2 .header {
@@ -287,4 +288,13 @@ img.cboxPhoto { /* this is the slideshow photo */
 
 iframe {
   overflow: hidden;
+}
+
+
+/*----------->>>>>>section-3<<<<<<<---------*/
+
+.section-3 {
+  height: 53.55em;
+  background-color: rgba(125, 125, 125, 1);
+  border-top: 2.75px solid rgba(207, 81, 26, 0.9);
 }
