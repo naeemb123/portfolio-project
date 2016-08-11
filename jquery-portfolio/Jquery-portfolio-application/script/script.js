@@ -139,6 +139,10 @@ var main = function(){
     $(this).colorbox({iframe:true, width:"80%", height:"80%"});
   });
 
+  $("ul#demo_menu1").sidebar();
+
+  
+
 
 }
 
