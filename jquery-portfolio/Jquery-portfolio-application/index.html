@@ -2,7 +2,8 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel ="stylesheet" href="styles/hover-min.css">
     <link rel="stylesheet" href="API/css/bootstrap.min.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans|Yellowtail|Comfortaa|Gloria+Hallelujah|Aldrich|Rochester' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="styles/style.css">
@@ -24,9 +25,9 @@
             <li class="dropdown projects">
               <p>Projects</p>
                 <ul class="dropdown-menu">
-                  <li>Android Application<br></li>
-                  <li>Web Application<br></li>
-                  <li>In Development<br></li>
+                  <li id="first">Android Application<br></li>
+                  <li id="second">Web Application<br></li>
+                  <li id="third">In Development<br></li>
                 </ul>
             </li>
 
@@ -188,7 +189,7 @@
             <button class="btn btn-default">
               Slideshow
             </button>
-            <a class='iframe' href="https://naeem-rahman-portfolio.herokuapp.com"><button class="btn btn-default">
+            <a class='iframe' href="http://naeem-rahman-portfolio.herokuapp.com"><button class="btn btn-default">
               View Website
             </button></a>
           </div>
@@ -279,12 +280,47 @@
   <div class="section-3">
 
     <ul id="demo_menu1" >
-        <li><a href="#" >jQuery</a></li>
-        <li><a href="#" >Write</a></li>
-        <li><a href="#" >Less</a></li>
-        <li><a href="#" >Do</a></li>
-        <li><a href="#" >More</a></li>
+        <li><img src="images/City-Of-London.jpg" height="120" width="120"></li>
+        <div class="info">
+        <li><p class="sidebar-content">Studying At Glasgow University</p></li>
+          <li><p class="sidebar-content">4rth Year Student</p></li>
+        </div>
+        <li class="sidebar-content quote">"The best preparation for tomorrow is doing your <br>best today."</li>
+        <li class="sidebar-content button">
+          <div class="btn btn-default hvr-shutter-out-horizontal">Contact Me</div>
+        </li>
     </ul>
+
+    <div class="jumbotron">
+
+      <div class="container">
+        <div class="about-me">
+          <h3>About me</h3>
+          <h2>Naeem Rahman</h2>
+        </div>
+    </div>
+
+    <div class="container">
+      <div class="aboutMe skills">
+        <h4>Skills:</h4>
+        <p>I am going to talk about my skills here</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="aboutMe experience">
+        <h4>Experience:</h4>
+        <p> I am going to talk about my experience here</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="aboutMe achievements">
+        <h4>Achievements:</h4>
+        <p>I am going to talk about my achievements here</p>
+      </div>
+
+    </div>
 
   </div>
 

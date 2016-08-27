@@ -12,10 +12,47 @@
     position: absolute;
 }
 
+.sidebar-body {
+  padding-top: 2.5em;
+}
+
+#demo_menu1 img {
+  border-radius: 100%;
+  margin-left: 1.8em;
+}
+
+.info {
+  padding-top: 1em;
+}
+
+li.sidebar-content.quote {
+  padding: 2em 0;
+}
+
+li.sidebar-content .btn-default {
+  margin: 2em 1.5em;
+  padding: .6em 2em;
+  border-radius: 7px;
+  opacity: .5;
+  border: none;
+}
+
+li.sidebar-content .btn-default:hover {
+  color: #fff;
+  opacity: 1;
+}
+
+
+li.sidebar-content.button {
+  padding-top: 1em;
+  border-radius: 5px;
+}
+
 div.sidebar-container {
-    width : 100px;
-    height : 200px;
+    width : 220px;
+    height : 600px;
     position:fixed;
+    display: none;
     background-color:#000000;
     filter: alpha(opacity=87);
     -moz-opacity:0.87;

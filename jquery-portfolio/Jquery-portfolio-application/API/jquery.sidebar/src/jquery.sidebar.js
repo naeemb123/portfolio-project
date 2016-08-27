@@ -34,12 +34,14 @@
                 root,
                 parent,
                 open = function(){
+                    $('.section-3 .jumbotron').animate({left: "+=190px", duration: 'fast'});
+
                     var data = elem.data("sidebar") || {},
                         opened = data.callback.sidebar.open,
                         container = data.container,
                         inject = data.inject,
                         body = data.body;
-                    
+
                     if (data.isEnter || data.isProcessing) {
                         return;
                     }
@@ -60,13 +62,14 @@
                     });
                 },
                 close = function(){
+                    $('.section-3 .jumbotron').animate({left: "-=190px", duration: 5000});
                     var data = elem.data("sidebar") || {},
                         closed = data.callback.sidebar.close,
                         container = data.container,
                         inject = data.inject,
                         body = data.body;
-                       
-                    if(!data.isEnter || data.isProcessing ) {
+
+                    if(!data.isEnter || data.isProcessing) {
                         return;
                     }
                     data.isProcessing = true;
@@ -85,20 +88,20 @@
                         }
                     });
                 };
-            
-            
+
+
             if(typeof options === "string"){
                 switch(options){
                     case "open" :
                         open();
                         break;
-                    case "close" : 
+                    case "close" :
                         close();
                         break;
                 }
                 return;
             }
-                
+
             //default setting
             options = $.extend(true, {
                 root : $(document.body),
@@ -114,10 +117,10 @@
                     },
                     sidebar : {
                         open : function(){
-                            
+
                         },
                         close : function(){
-                            
+
                         }
                     }
                 },
@@ -131,29 +134,29 @@
                 open : "mouseenter.sidebar",
                 close : "mouseleave.sidebar"
             }, options);
-            
+
             root = options.root;
             isInnerElement = !root.is(document.body);
             parent = ( isInnerElement ) ? root.addClass("sidebar-root") : $(_window);
-            
+
             position = options.position;
             duration = options.duration;
-            
+
             container.attr("id", "jquerySideBar" + new Date().getTime()).addClass("sidebar-container").addClass(position);
             inject.addClass("sidebar-inject").addClass(position);
             body.addClass("sidebar-body");
-            
+
             //append to body
             body.append(this);
             container.append(body);
             container.append(inject);
             root.append(container);
-            
+
             width = container.width();
             height = container.height();
             injectWidth = inject.width();
             injectHeight = inject.height();
-            
+
             containerCss = {
                 height: height,
                 width: width
@@ -162,7 +165,7 @@
                 height: height,
                 width: width
             };
-            
+
             if(position === "left" || position === "right") {
                 margin = width - injectWidth;
                 injectCss = {
@@ -170,7 +173,7 @@
                     width : injectWidth
                 };
                 containerCss.top = options.top || (parent.height()/2) - (height/2) + "px";
-                
+
             } else {
                 margin = height - injectHeight;
                 injectCss = {
@@ -179,26 +182,26 @@
                 };
                 containerCss.left = options.left || (parent.width()/2) - (width/2) + "px";
             }
-            
+
             containerCss[position] = "-" + margin + "px";
             injectCss[position] = margin + "px";
             options.animate.container.enter[position] = 0;
             options.animate.container.leave[position] = "-" + margin;
-            
+
             //container
             container.css(containerCss);
-            
+
             //inject
             inject.css(injectCss);
-            
+
             //body
             body.css(bodyCss).hide();
-            
+
             //menu callback
             $(this).addClass("sidebar-menu").find("li")
                 .bind("mouseenter.sidebar",options.callback.item.enter)
                 .bind("mouseleave.sidebar",options.callback.item.leave);
-            
+
             //container events
             if(options.open) {
                 container.bind(options.open,open);
@@ -206,13 +209,13 @@
             if(options.close) {
                 container.bind(options.close,close);
             }
-            
+
             //store data
             options.container = container;
             options.inject = inject;
             options.body = body;
             elem.data("sidebar", options);
-            
+
             parent.resize(function(){
                 if(position === "left" || position === "right") {
                     container.css({top:($(this).height()/2) - (height/2) + "px"});
@@ -220,7 +223,7 @@
                     container.css({left:($(this).width()/2) - (width/2) + "px"});
                 }
             });
-            
+
         });
     };
 }(jQuery, this));

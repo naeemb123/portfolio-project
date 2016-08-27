@@ -2,64 +2,57 @@ var main = function(){
 
   //dropdown function
   $('.projects').mouseenter(function(){
-    $(this).find('ul').show(function(){
+    $(this).find('ul').stop( true, true ).show(function(){
       $(this).slideDown();
     })
   });
 
   $('.projects').mouseleave(function(){
-    $(this).find('ul').hide(function(){
+    $(this).find('ul').stop( true, true ).hide(function(){
       $(this).slideUp();
+
     });
   });
 
   $('.experience').mouseenter(function(){
-    $(this).find('ul').show(function(){
+    $(this).find('ul').stop( true, true ).show(function(){
       $(this).slideDown();
     });
   });
 
   $('.experience').mouseleave(function(){
-    $(this).find('ul').hide(function(){
+    $(this).find('ul').stop( true, true ).hide(function(){
       $(this).slideUp();
     });
   });
 
-  $('.contact').on('click', function(){
-    $('#dialog').dialog({
-      closeOnEscape: true,
-      modal: true,
-      height: 380,
-      width: 600,
-      show: {
-        effect: "blind",
-        duration: 500
-      },
-      hide: {
-        effect: 'explode',
-        duration: 300
-      },
-      buttons: [
-    {
-      text: "Ok",
-      icons: {
-        primary: "ui-icon-heart"
-      },
-      click: function() {
-        $( this ).dialog( "close" );
-      }
-
-    }
-  ]
-    });
+  $('.section-1 .menu-bar .projects .dropdown-menu').children().eq(0).click(function(){
+    $('#accordion').accordion('option','active', 0);
+    openAccordion();
   });
+
+  $('.section-1 .menu-bar .projects .dropdown-menu').children().eq(1).click(function(){
+    $('#accordion').accordion('option','active', 1);
+    openAccordion();
+  });
+
+  $('.section-1 .menu-bar .projects .dropdown-menu').children().eq(2).click(function(){
+    $('#accordion').accordion('option','active', 2);
+    openAccordion();
+  });
+
+
+
+
+//click dialog
+dialogAppear('.section-1 .dropdown.contact', '.section-1');
 
   //To scroll to section-2 when clicking the 'v' button on section-1
   var $elem = $('.section-2');
 
   $('span.glyphicon.glyphicon-chevron-down').click(function(e){
     $('html, body').animate({
-      scrollTop: $elem.height()
+      scrollTop: $elem.height()+5
     }, 800);
   });
 
@@ -81,41 +74,15 @@ var main = function(){
 //when accordion header is clicked, the section-2 gets more height to fit the content.
 //it also removes the height when the accordion-closes
 //it also scrolls to view the entire section-2 as it was initially again
+
   $('.ui-accordion-header:first-child').click(function(){
-      var active = $( "#accordion").accordion( "option", "active");
-      console.log(active);
-      if (active !== false){
-        $('.section-2').css('height', '92.35em');
-      }
-      else if (active === false){
-        defaultHeight_section2();
-      }
+    openAccordion();
   });
-
   $('.ui-accordion-header:nth-child(3)').click(function(){
-    var active = $( "#accordion").accordion( "option", "active");
-    console.log(active);
-    if (active !== false){
-      console.log("afssd");
-      $('.section-2').css('height', '92.35em');
-    }
-    else if (active === false){
-      defaultHeight_section2();
-    }
+    openAccordion();
   });
-
   $('.ui-accordion-header:nth-child(5)').click(function(){
-
-    console.log("yo");
-    var active = $( "#accordion").accordion( "option", "active");
-    console.log(active);
-    if (active !== false){
-      console.log("afssd");
-      $('.section-2').css('height', '92.35em');
-    }
-    else if (active === false){
-      defaultHeight_section2();
-    }
+    openAccordion();
   });
 
   //when the glyphicon-chevron-up in the accordion-content is clicked, the accordion closes
@@ -123,6 +90,7 @@ var main = function(){
   $('#accordion .footer .glyphicon-chevron-up').click(function(){
     $('#accordion').accordion('option','active', 'false');
     defaultHeight_section2();
+    $('body').css('overflow', 'visible');
   });
 
   //colorbox API: When the image or slideshow button is clicked, then use colorbox API to display the slideshow of the images
@@ -136,14 +104,46 @@ var main = function(){
   });
 
   $('.iframe').click(function(){
-    $(this).colorbox({iframe:true, width:"80%", height:"80%"});
+    $(this).colorbox({
+      iframe:true,
+      width:"80%",
+      height:"80%"
+    });
   });
 
   $("ul#demo_menu1").sidebar();
 
-  
+
+  $(document).scroll(function(){
+    var y = $(this).scrollTop();
+    if (y > 1400) {
+      $('div.sidebar-container').fadeIn();
+    }
+    else {
+      $('div.sidebar-container').fadeOut();
+    }
+  });
+
+  dialogAppear('#demo_menu1 .sidebar-content.button .btn', '.section-3');
 
 
+
+
+
+}
+
+
+var openAccordion = function(){
+  var active = $( "#accordion").accordion( "option", "active");
+  console.log(active);
+  if (active !== false){
+    $('.section-2').css('height', '92.35em');
+    $('body').css('overflow', 'hidden');
+  }
+  else if (active === false){
+    defaultHeight_section2();
+    $('body').css('overflow', 'visible');
+  }
 }
 
 var defaultHeight_section2 = function(){
@@ -154,5 +154,41 @@ var defaultHeight_section2 = function(){
     $('.section-2').css('height', '53.55em');
   });
 }
+
+var dialogAppear = function(selector, background_section){
+  $(selector).on('click', function(){
+    $('body').css('overflow', 'hidden');
+    $(background_section).fadeTo(350, 0.6);
+    $('#dialog').dialog({
+      closeOnEscape: true,
+      modal: true,
+      height: 380,
+      width: 600,
+      show: {
+        effect: "blind",
+        duration: 500
+      },
+      hide: {
+        effect: 'explode',
+        duration: 300
+      },
+      buttons: [
+    {
+      text: "Ok",
+      icons: {
+        primary: "ui-icon-heart"
+      },
+      click: function() {
+        $( this ).dialog( "close" );
+        $('body').css('overflow', 'visible');
+        $(background_section).fadeTo(600, 1);
+      }
+
+    }
+  ]
+    });
+  });
+}
+
 
 $(document).ready(main);
