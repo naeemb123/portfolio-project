@@ -29,11 +29,12 @@ html, body {
 @media screen and (-webkit-min-device-pixel-ratio:0) {
 
   .section-1 {
-    background: url(../images/building.jpeg);
+    background: url(../images/hand.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 53.55em;
+    height: 100%;
+    max-height: 748px;
     border-bottom: 2.75px solid rgba(207, 81, 26, 0.9);
   }
 
@@ -55,6 +56,10 @@ html, body {
 
 .section-1  .projects:hover, .section-1  .experience:hover, .section-1 .contact:hover {
   background-color: rgba(0, 0, 0, 0.7);
+}
+
+.section-1 .projects:active, .section-1 .experience:active {
+  background-color: rgba(255,255,255, .5);
 }
 
 .section-1 .menu-bar .projects .dropdown-menu #first:active, .section-1 .menu-bar .projects .dropdown-menu #second:active, .section-1 .menu-bar .projects .dropdown-menu #third:active {
@@ -87,6 +92,10 @@ html, body {
 
 .dropdown-menu li {
   display: block;
+}
+
+.section-1 li.dropdown.experience:active {
+  rgba(255, 255, 255, 0.5);
 }
 
 #dialog {
@@ -209,19 +218,18 @@ button.ui-button.ui-corner-all.ui-widget {
   padding: 0 1em 0 0;
 }
 
-.footer {
+.section-1 .footer {
   padding: 6em 0 0 0;
 }
 
-.footer .row {
+.section-1 .footer .row {
   padding-left: 2em;
 }
 
 span.glyphicon.glyphicon-chevron-down, .hvr-icon-pulse-grow {
-    font-size: 5em;
-    color: rgba(255,255,255,0.6);
-    margin-right: 1em;
-    padding-top: .2em;
+  font-size: 5.5em;
+  color: rgba(255,255,255,0.6);
+  margin-right: 1.1em;
 }
 
 span.glyphicon.glyphicon-chevron-down:hover  {
@@ -233,14 +241,22 @@ span.glyphicon.glyphicon-chevron-down:hover  {
 
 .section-2 {
   height: 53.55em;
-  background-color: rgba(0, 0, 0, 1);
+  /*background-color: rgba(0, 0, 0, 1);*/
   border-top: 2.75px solid rgba(207, 81, 26, 0.9);
   border-bottom: 2.75px solid rgba(207, 81, 26, 0.9);
+
+  background: url(../images/hand.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*height: 100%;*/
+  /*max-height: 748px;*/
 }
 
 .section-2 .header {
   max-height: 10em;
   height: 100%;
+  background-color: transparent;
 }
 
 .section-2 .header h1 {

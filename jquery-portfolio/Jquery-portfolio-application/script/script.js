@@ -14,17 +14,30 @@ var main = function(){
     });
   });
 
-  $('.experience').mouseenter(function(){
-    $(this).find('ul').stop( true, true ).show(function(){
-      $(this).slideDown();
-    });
+  $('.projects p').click(function(){
+    $('html, body').animate({
+      scrollTop: $elem.height()+5
+    }, 800);
   });
 
-  $('.experience').mouseleave(function(){
-    $(this).find('ul').stop( true, true ).hide(function(){
-      $(this).slideUp();
-    });
-  });
+
+  $('.experience').click(function(){
+    $('html, body').animate({
+      scrollTop: $elem.height()+$elem.height()+4
+    }, 800)
+  })
+
+  // $('.experience').mouseenter(function(){
+  //   $(this).find('ul').stop( true, true ).show(function(){
+  //     $(this).slideDown();
+  //   });
+  // });
+  //
+  // $('.experience').mouseleave(function(){
+  //   $(this).find('ul').stop( true, true ).hide(function(){
+  //     $(this).slideUp();
+  //   });
+  // });
 
   $('.section-1 .menu-bar .projects .dropdown-menu').children().eq(0).click(function(){
     $('#accordion').accordion('option','active', 0);
