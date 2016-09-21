@@ -1,0 +1,352 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+@media only screen
+   and (min-device-width: 320px)
+   and (max-width: 568px)
+   and (orientation: portrait) {
+
+
+/*section-1*/
+
+  .section-1 {
+    height: 39em;
+  }
+
+  .section-1 .jumbotron h1 {
+    font-size: 2em;
+  }
+
+/*section-2*/
+
+}
+
+
+/*---------->>>>section-1<<<<<--------*/
+
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+
+  .section-1 {
+    background: url(../images/hand.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    max-height: 748px;
+    border-bottom: 2.75px solid rgba(207, 81, 26, 0.9);
+  }
+
+}
+
+.header {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.menu-bar {
+  padding: 0;
+  margin: 0;
+}
+
+.section-1 .projects, .section-1 .experience, .section-1 .contact {
+  padding: .5em 1em;
+  margin-right: 3em;
+}
+
+.section-1  .projects:hover, .section-1  .experience:hover, .section-1 .contact:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.section-1 .projects:active, .section-1 .experience:active {
+  background-color: rgba(255,255,255, .5);
+}
+
+.section-1 .menu-bar .projects .dropdown-menu #first:active, .section-1 .menu-bar .projects .dropdown-menu #second:active, .section-1 .menu-bar .projects .dropdown-menu #third:active {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.dropdown-menu li:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.dropdown-menu li {
+  padding: .4em 0;
+}
+
+.menu-bar li {
+  display: inline-block;
+  font-size: 2em;
+  color: #fff;
+  font-family: 'Gloria+Hallelujah', cursive;
+}
+
+
+.dropdown-menu {
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: .4em;
+  margin-top: 0;
+  min-width: 200px;
+  border: none;
+}
+
+.dropdown-menu li {
+  display: block;
+}
+
+.section-1 li.dropdown.experience:active {
+  rgba(255, 255, 255, 0.5);
+}
+
+#dialog {
+  display: none;
+}
+
+#dialog h3 {
+  margin: 0;
+  padding-top: .5em;
+  text-decoration: underline;
+}
+
+#dialog ul {
+  list-style: none;
+}
+
+#dialog ul li {
+  margin: 2em 0;
+  font-size: 1.2em;
+}
+
+#dialog .row img {
+  margin: 0 3em;
+}
+
+#dialog .row img:hover {
+  border: 1.5px solid transparent;
+}
+
+#dialog .row img:last-child {
+  border-radius: 10px;
+}
+
+#dialog .remove-outline, .ui-dialog {
+  outline: none !important;
+}
+
+.ui-dialog { /*The outer container of the dialog.*/
+  border: 2px solid rgba(166, 3, 3, 0.7);
+  height: 100px;
+  width: 100px;
+}
+
+.ui-dialog.ui-corner-all.ui-widget.ui-widget-content.ui-front.ui-dialog-buttons.ui-draggable.ui-resizable {
+  position: absolute !important;
+}
+
+.no-close, .ui-dialog-titlebar-close {
+  display: none;
+}
+
+.ui-dialog-titlebar { /*The title bar containing the dialog's title and close button.*/
+  background-color: rgba(0, 0, 0, .9);
+}
+
+.ui-dialog-title { /*The container around the textual title of the dialog.*/
+}
+
+.ui-dialog-titlebar-close { /*The dialog's close button.*/
+
+}
+
+.ui-widget-header {
+}
+
+.ui-widget-content {
+}
+
+.ui-dialog-content { /*The container around the dialog's content. This is also the element the widget was instantiated with.*/
+  color: #fff;
+  background-color: rgba(0, 0, 0, .9);
+  text-align: center;
+}
+
+.ui-dialog-buttonpane { /*The pane that contains the dialog's buttons. This will only be present if the buttons option is set.*/
+
+}
+
+.ui-dialog-buttonset {
+    background-color: rgba(0,0,0,.9);
+    padding: 3em 0 1em 0;
+}
+
+button.ui-button.ui-corner-all.ui-widget {
+    border-radius: 6px;
+    padding: .5em 3.5em;
+    background-color: rgba(255,255,255,.6);
+    margin-left: 16.6em;
+    border-color: rgba(166, 3, 3, 0.7);
+}
+
+
+
+.section-1 .jumbotron .container {
+  margin-top: 10em;
+}
+
+.section-1 .jumbotron {
+  color: #fff;
+  background-color: transparent;
+  text-align: center;
+}
+
+.section-1 .jumbotron h1 {
+  font-size: 9em;
+  font-family: 'Aldrich', cursive;
+  letter-spacing: .25em;
+}
+
+.section-1 .jumbotron p {
+  font-size: 1.8em;
+}
+
+.section-1 .jumbotron ul{
+  list-style: none;
+}
+
+.section-1 .jumbotron ul li {
+  display: inline-block;
+  padding: 0 1em 0 0;
+}
+
+.section-1 .footer {
+  padding: 6em 0 0 0;
+}
+
+.section-1 .footer .row {
+  padding-left: 2em;
+}
+
+span.glyphicon.glyphicon-chevron-down, .hvr-icon-pulse-grow {
+  font-size: 5.5em;
+  color: rgba(255,255,255,0.6);
+  margin-right: 1.1em;
+}
+
+span.glyphicon.glyphicon-chevron-down:hover  {
+  color: rgba(255,255,255,0.9);
+}
+
+
+/*----------->>>>>section-2<<<<<-----------*/
+
+.section-2 {
+  height: 53.55em;
+  background-color: rgba(12, 18, 33, 1);
+  border-top: 2.75px solid rgba(207, 81, 26, 0.9);
+  border-bottom: 2.75px solid rgba(207, 81, 26, 0.9);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*height: 100%;*/
+  /*max-height: 748px;*/
+}
+
+.section-2 .header {
+  max-height: 10em;
+  height: 100%;
+  background-color: transparent;
+}
+
+.section-2 .header h1 {
+  font-size: 6.5em;
+  text-align: center;
+  padding: .1em 0;
+  color: rgba(207, 81, 26,.6);
+}
+
+#accordion {
+  margin-top: 6em;
+  background-color: transparent;;
+  outline: none !important;
+}
+
+#accordion .row {
+  padding-bottom: 2em;
+}
+
+#accordion .footer {
+  padding: 0;
+}
+
+#accordion .footer .glyphicon-chevron-up {
+  font-size: 3.8em;
+  color: #000;
+  cursor: pointer;
+}
+
+.images {
+  text-align: center;
+}
+
+.images .btn {
+  padding: .5em 2em;
+  display: inline-block;
+  margin: 0 1em;
+}
+
+button {
+  outline: none !important;
+}
+
+img.cboxPhoto { /* this is the slideshow photo */
+    margin: 0;
+}
+
+#accordion .footer .glyphicon-chevron-up:hover {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+
+@media only screen  and (min-width : 1224px) {
+  .text {
+    padding: 5em 2em 0 5em
+  }
+}
+
+iframe {
+  overflow: hidden;
+}
+
+
+/*----------->>>>>>section-3<<<<<<<---------*/
+
+.section-3 {
+  height: 53.55em;
+  background-color: rgba(125, 125, 125, 1);
+  border-top: 2.75px solid rgba(207, 81, 26, 0.9);
+}
+
+.section-3 .jumbotron {
+  background: transparent;
+  position: relative;
+}
+
+.section-3 .about-me {
+  margin-top: 10em;
+}
+
+.section-3 .about-me h3 {
+  letter-spacing: 1em;
+}
+
+.section-3 .about-me h2 {
+  letter-spacing: .6em;
+}
+
+.section-3 .aboutMe.skills {
+  margin-top: 2em;
+}
+
+.section-3 .aboutMe {
+  padding: .5em 0;
+}
