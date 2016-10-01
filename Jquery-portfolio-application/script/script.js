@@ -182,7 +182,7 @@ var openAccordion = function(){
   var active = $( "#accordion").accordion( "option", "active");
   console.log(active);
   if (active !== false){
-    // $('.section-2').css('height', '92.35em');
+    $('.section-2').css('height', '92.35em');
     $('body').css('overflow', 'hidden');
   }
   else if (active === false){
@@ -196,7 +196,7 @@ var defaultHeight_section2 = function(){
     scrollTop: 747 //section-2's default height
   }, 800);
   $('html, body').promise().done(function(){
-    // $('.section-2').css('height', '53.55em');
+    $('.section-2').css('height', '53.55em');
   });
 }
 

@@ -322,17 +322,32 @@ iframe {
 
 .section-3 {
   height: 53.55em;
-  background-color: rgba(125, 125, 125, 1);
+  background: url(../images/AbstractWallpapers/Grey:DarkGrey.jpg);
+  /*background: url(../images/AbstractWallpapers/LightYellow.jpg);*/
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   border-top: 2.75px solid rgba(207, 81, 26, 0.9);
+  color: #fff;
 }
 
 .section-3 .jumbotron {
   background: transparent;
   position: relative;
+  margin: 0;
+  padding: 20px;
+}
+
+.section-3 .about-me.general p{
+  font-size: 19px;
+  /*font-family: "Caveat-Regular";*/
+  /*font-family: "Calligraffitti";*/
+  /*font-family: "Berkshire Swash Regular";*/
+  /*font-family: "Bad Script";*/
 }
 
 .section-3 .about-me {
-  margin-top: 10em;
+  margin-top: 3em;
 }
 
 .section-3 .about-me h3 {
@@ -346,7 +361,20 @@ iframe {
 .section-3 .aboutMe.skills {
   margin-top: 2em;
 }
+.section-3 .skills p, .section-3 .experience p, .section-3 .achievements p {
+  font-size: 17px;
+}
 
-.section-3 .aboutMe {
-  padding: .5em 0;
+#demo_menu1 .info {
+  margin-top: 30px;
+}
+
+#demo_menu1 .info p {
+  font-family: "Caveat-Regular";
+  font-size: 18px;
+}
+
+#demo_menu1 .sidebar-content.quote {
+  font-family: "Bad Script";
+  font-size: 20px;
 }
